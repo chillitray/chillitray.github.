@@ -69,7 +69,7 @@ opacity: 0.2;
 	        		<span class="subheading">Digitalize your Business !</span>
 	            <h1 class="mb-3"><span>Digitalize,</span> <span>Develop,</span> <span>Grow !</span></h1>
 	            <p>Spice up your Business with Chilli Tray.</p>
-	            <p><a href="#" class="btn btn-primary px-4 py-3">Get in touch</a></p>
+	            <p><a href="#" class="btn btn-primary px-4 py-3" id="contact">Get in touch</a></p>
 	          </div>
 	        </div>
 	    	</div>
@@ -744,6 +744,87 @@ opacity: 0.2;
 	    
 <!-- Footer ends -->	    
     
+	    
+<!--Form Get in touch start-->
+<div id="contactForm">
+<i class="material-icons" style="cursor:pointer; width: 100%; text-align: right;" onclick="document.getElementById('contactForm').style.display='none';">close</i>
+<h1>Request Quote!</h1>
+<small>We'll get back to you shortly.</small>
+<form action="#">
+<input class="form_ip" placeholder="Destination" type="text" required />
+<input class="form_ip" placeholder="Name" type="text" required />
+<input class="form_ip" placeholder="Phone" type="text" required />
+<input class="form_ip" placeholder="Email" type="email" required />
+<!--	<input class="form_ip" placeholder="Preferred star category" type="text" required /> -->
+<textarea class="form_ip formTextarea" placeholder="Comment"></textarea>
+<input class="formBtn" type="submit" />
+<input class="formBtn" type="reset" />
+</form>
+</div>
+</div>
+</div><!-- col end -->
+</div><!-- row end -->
+</div><!-- Action style box -->
+</div><!-- Container end -->
+</section><!-- Action end -->
+<style type="text/css">
+.formBtn {
+width: 140px;
+display: inline-block;
+background: #fc0545; /* popup button color */
+color: #fff;
+font-weight: 100;
+font-size: 1.2em;
+border: none;
+height: 30px;
+}
+.form_ip {
+margin: .8em auto;
+font-family: inherit;
+text-transform: inherit;
+font-size: inherit;
+display: block;
+width: 280px;
+padding: .4em;
+}
+.formTextarea { height: 80px; resize: none; }
+#contactForm {
+z-index: 10000;
+display: none;
+border: 6px solid #fc0545;
+padding: 2em;
+width: 400px;
+text-align: center;
+background: #fff;
+position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%)
+}
+</style>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script id="INLINE_PEN_JS_ID">
+$(function () {
+// contact form animations
+$('#contact').click(function () {
+$('#contactForm').fadeToggle();
+});
+$(document).mouseup(function (e) {
+var container = $("#contactForm");
+if (!container.is(e.target) // if the target of the click isn't the container...
+&& container.has(e.target).length === 0) // ... nor a descendant of the container
+{
+container.fadeOut();
+}
+});
+});
+//# sourceURL=pen.js
+</script>
+
+<!--Form Get in touch ends-->
+	    
   
 
   <!-- loader -->
@@ -767,6 +848,5 @@ opacity: 0.2;
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
   </body>
 </html>
