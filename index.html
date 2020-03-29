@@ -66,8 +66,11 @@ opacity: 0.2;
 	      	</style>
 	        <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
 	        	<div class="text mt-5">
-	        		<span class="subheading">Digitalize your Business !</span>
-	            <h1 class="mb-3"><span>Digitalize,</span> <span>Develop,</span> <span>Grow !</span></h1>
+	        		<span class="subheading">Digitalize your </span>
+              <span class="typed-words subheading">Business</span>
+              <span class="subheading">!</span>
+	            <h1 class="mb-3"><span>Digitalize,</span> <span>Develop,</span> <span>Grow !</span>
+              </h1>
 	            <p>Spice up your Business with Chillitray.</p>
 	            <p><a href="#" class="btn btn-primary px-4 py-3" id="contact">Contact Us</a></p>
 	          </div>
@@ -85,7 +88,7 @@ opacity: 0.2;
     			<!--	<p>A small river named Duden flows by their place</p> -->
     			</div>
     			<div class="col-lg-7 p-5 ftco-wrap ftco-animate">
-				<h2><font color=#fff>"We don't just write code, we write experiences"</font></h2>
+				<h2><font color=#fff>"We don't just write code, <span class="typed-wordss">we write experiences</span>"</font></h2>
     			<!--	<form action="#" class="domain-form d-flex mb-3">
               <div class="form-group domain-name">
                 <input type="text" class="form-control name px-4" placeholder="Enter your domain name...">
@@ -848,5 +851,31 @@ container.fadeOut();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- typed words script -->
+  <script src="js/typed.js"></script>
+      <script>
+      var typed = new Typed('.typed-words', {
+      strings: ["Business"," Startups"," Organization", " Company"],
+      typeSpeed: 40,
+      backSpeed: 40,
+      backDelay: 2000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+      });
+      </script>
+      <script>
+      var typed = new Typed('.typed-wordss', {
+      strings: ["we write experiences","we write experiences"],
+      typeSpeed: 80,
+      backSpeed: 80,
+      backDelay: 2000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+      });
+      </script>
+  <!-- typed words script end-->
   </body>
 </html>
