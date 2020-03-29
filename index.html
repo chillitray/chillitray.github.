@@ -27,6 +27,33 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Crisp chatbot plugin -->
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="825c6884-f378-4893-8ac1-4e9bef8499ba";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script type="text/javascript">
+    (function() {
+    var isBootstrapEvent = false;
+    if (window.jQuery) {
+        var all = jQuery('*');
+        jQuery.each(['hide.bs.dropdown', 
+            'hide.bs.collapse', 
+            'hide.bs.modal', 
+            'hide.bs.tooltip',
+            'hide.bs.popover'], function(index, eventName) {
+            all.on(eventName, function( event ) {
+                isBootstrapEvent = true;
+            });
+        });
+    }
+    var originalHide = Element.hide;
+    Element.addMethods({
+        hide: function(element) {
+            if(isBootstrapEvent) {
+                isBootstrapEvent = false;
+                return element;
+            }
+            return originalHide(element);
+        }
+    });
+})();
+  </script>
   </head>
   <body>
     <style type="text/css">
@@ -920,33 +947,5 @@ container.fadeOut();
       });
       </script>
   <!-- typed words script end-->
-
-  <script type="text/javascript">
-    (function() {
-    var isBootstrapEvent = false;
-    if (window.jQuery) {
-        var all = jQuery('*');
-        jQuery.each(['hide.bs.dropdown', 
-            'hide.bs.collapse', 
-            'hide.bs.modal', 
-            'hide.bs.tooltip',
-            'hide.bs.popover'], function(index, eventName) {
-            all.on(eventName, function( event ) {
-                isBootstrapEvent = true;
-            });
-        });
-    }
-    var originalHide = Element.hide;
-    Element.addMethods({
-        hide: function(element) {
-            if(isBootstrapEvent) {
-                isBootstrapEvent = false;
-                return element;
-            }
-            return originalHide(element);
-        }
-    });
-})();
-  </script>
   </body>
 </html>
