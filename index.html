@@ -330,10 +330,13 @@ opacity: 0.2;
     	<div class="container">
     		<div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <span class="subheading">More than 12,000 websites trusted hosted</span>
+            <div style="display: inline;"><h4 style="color: white;">More than <strong class="counter-wrap ftco-animate number" data-number="1518207412">0</strong>+ <font class="typed-wordsss">websites in the world and</font></h4></div>
+          </div></br>
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <span><h1 style="color: white;">we want the best for you.</h1></span>
           </div>
         </div>
-    		<div class="row justify-content-center">
+    	<!--	<div class="row justify-content-center">
     			<div class="col-md-10">
 		    		<div class="row">
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
@@ -370,7 +373,7 @@ opacity: 0.2;
 		          </div>
 		        </div>
 	        </div>
-        </div>
+        </div> -->
     	</div>
     </section>
 	  
@@ -934,6 +937,17 @@ container.fadeOut();
       typeSpeed: 80,
       backSpeed: 80,
       backDelay: 2000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+      });
+      </script>
+      <script>
+      var typed = new Typed('.typed-wordsss', {
+      strings: [" websites in the world and"," websites in the world and"],
+      typeSpeed: 10,
+      backSpeed: 80,
+      backDelay: 2500,
       startDelay: 1000,
       loop: true,
       showCursor: true
