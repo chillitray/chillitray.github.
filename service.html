@@ -41,7 +41,7 @@
   </head>
   <body>
     
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Chillitray</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,17 +50,55 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item active"><a href="service.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="whyus.html" class="nav-link">Why Us?</a></li>
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item option1">
+              <div class="dropdown">
+                <a href="service.html" style="text-transform: uppercase; font-size: 13px;color: black !important; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; " class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">Web Development</a>
+                  <a href="#" class="dropdown-item">Digital Marketing</a>
+                  <a href="#" class="dropdown-item">API Development</a>
+                  <a href="#" class="dropdown-item">Solutions</a>
+                </div>
+              </div>
+            </li>
+	          <li class="nav-item option2"><a href="services.html" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="whyus.html" class="nav-link">Why Us?</a></li>
 	          <li class="nav-item"><a class="nav-link" href="whyus.html">Pricing</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+	          <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get Quote?</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+	  <style type="text/css">
+	      		@media screen and (max-width: 1200px) {
+.one-third {
+opacity: 0.2;
+}
+}
+@media screen and (min-width: 995px) {
+.option2 {
+  display: none;
+}
+.option1 {
+  display: block;
+}
+}
+@media screen and (max-width: 995px) {
+.option2 {
+  display: block;
+}
+.option1 {
+  display: none;
+}
+}
+.dropdown-item:hover {
+	color: white;
+	background-color: #6927ff;  
+}
+	      	</style>
     <!-- END nav -->
 
     <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
