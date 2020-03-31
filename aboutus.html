@@ -24,7 +24,17 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style_aboutus.css">
-    
+    <script type="text/javascript">
+      window.onscroll = () => {
+        const nav1 = document.querySelector('#nav_bar');
+        if(this.scrollY <= 10) {
+          nav1.className = 'navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light';
+        }
+        else {
+         nav1.className = 'nav_scroll navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light'; 
+        }
+      };
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
   
@@ -107,19 +117,20 @@
     </header>
 -->
 <!-- alter navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+
+<nav id="nav_bar" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" style="color: white !important;" href="index.html">Chillitray</a>
+	      <a class="navbar-brand noscroll" href="index.html">Chillitray</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link" style="color: white !important;">Home</a></li>
+	          <li class="nav-item"><a href="index.html" class="nav-link noscroll">Home</a></li>
 	          <li class="nav-item option1">
               <div class="dropdown">
-                <a href="service.html" style="text-transform: uppercase; color: white !important; font-size: 13px; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; " class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: white !important;">Services</a>
+                <a href="service.html" style="text-transform: uppercase; font-size: 13px; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; " class="nav-link dropdown-toggle noscroll" data-toggle="dropdown">Services</a>
                 <div class="dropdown-menu">
                   <a href="#"  class="dropdown-item">Web Development</a>
                   <a href="#" class="dropdown-item" >Digital Marketing</a>
@@ -128,51 +139,85 @@
                 </div>
               </div>
             </li>
-	          <li class="nav-item option2"><a href="services.html" style="color: white !important;" class="nav-link">Services</a></li>
-              <li class="nav-item"><a href="whyus.html" style="color: white !important;" class="nav-link">Why Us?</a></li>
-	          <li class="nav-item"><a class="nav-link" style="color: white !important;" href="whyus.html">Pricing</a></li>
+	          <li class="nav-item option2"><a href="services.html" id="1" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="whyus.html" class="nav-link noscroll">Why Us?</a></li>
+	          <li class="nav-item"><a class="nav-link noscroll" href="whyus.html">Pricing</a></li>
 	          <li class="nav-item active"><a href="aboutus.html" style="color:#6927ff !important;" class="nav-link">About Us</a></li>
-	          <li class="nav-item"><a href="blog.html" style="color: white !important;" class="nav-link">Blog</a></li>
-	          <li class="nav-item cta"><a href="contact.html" style="color: white !important;" class="nav-link"><span>Get Quote?</span></a></li>
+	          <li class="nav-item"><a href="blog.html" class="noscroll nav-link">Blog</a></li>
+            <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get Quote?</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+
 	  <style type="text/css">
-	      		@media screen and (max-width: 1200px) {
-.one-third {
-opacity: 0.2;
-}
-}
-@media screen and (min-width: 995px) {
-.option2 {
-  display: none;
-}
-.option1 {
-  display: block;
-}
-}
-@media screen and (max-width: 995px) {
-.option2 {
-  display: block;
-}
-.option1 {
-  display: none;
-}
-}
-.nav-link {
-	font-weight: bolder !important;
-}
-.nav-link:hover {
-	color: #6927ff !important;
-}
-.dropdown-item:hover {
-	color: white;
-	background-color: #6927ff;  
-}
+      .nav_scroll {
+        background: white !important; 
+      }
+      .nav_scroll > .container > .collapse > .navbar-nav > .nav-item > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .collapse > .navbar-nav > .nav-item > .dropdown > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important;
+      }
+      .noscroll {
+        color: white !important;
+      }
+      nav {
+        position: fixed !important; 
+        top:0px !important; 
+        background: transparent !important; 
+        z-index: 3; 
+        padding: 1.7rem 1rem !important;
+      }
+        @media screen and (max-width: 1200px) {
+        .one-third {
+        opacity: 0.2;
+        }
+        }
+        @media screen and (min-width: 995px) {
+        .option2 {
+          display: none;
+        }
+        .option1 {
+          display: block;
+        }
+        }
+        @media screen and (max-width: 995px) {
+        .option2 {
+          display: block;
+        }
+        .option1 {
+          display: none;
+        }
+        }
+        .nav-link {
+        	font-weight: bolder !important;
+        }
+        .nav-link:hover {
+        	color: #6927ff !important;
+        }
+        .dropdown-item:hover {
+        	color: white;
+        	background-color: #6927ff;  
+        }
 	      	</style>
     <!-- END nav -->
-  
+  <style type="text/css">
+    .btn {
+      color: white !important;
+      background: #6927ff !important; 
+      border: 1px solid #6927ff !important; 
+    }
+   .btn:hover {
+      background: white !important;
+      color: #6927ff !important;  
+      border: 2px solid #6927ff !important; 
+    }
+  </style>
      
     <div class="site-blocks-cover overlay" style="background-image: url(images/aboutus/abtus.jpg);" data-aos="fade" id="home-section">
 
