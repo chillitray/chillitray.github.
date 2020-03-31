@@ -68,8 +68,8 @@ body:after {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
   .btn.btn-primary {
-    background: #007bff;
-    border-color: #007bff;
+    background: #6927ff;
+    border-color: #6927ff;
     color: #fff; }
     .btn.btn-primary:hover {
       background: #000;
@@ -323,7 +323,7 @@ body:after {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #007bff; }
+  background-color: #6927ff; }
 
 .nav-fill .nav-item {
   -webkit-box-flex: 1;
@@ -2511,7 +2511,7 @@ body:after {
   text-transform: uppercase; }
 
 .section-title {
-  color: #007bff;
+  color: #6927ff;
   font-size: 40px;
   font-weight: 900; }
   @media (max-width: 991.98px) {
