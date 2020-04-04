@@ -82,12 +82,13 @@
     height: max-content;
     display: inline-table;
 }
-.navbar-toggler:active,.navbar-toggler:focus,.navbar-toggler:focus:active  {
+#navbar-toggler:active,#navbar-toggler:focus,#navbar-toggler:focus:active,
+#navbar-toggler>a:active,#navbar-toggler>a:focus,#navbar-toggler>a:focus:active  {
   background-image: none !important;
   outline: 0 !important;
   box-shadow: none !important;
-
   -webkit-box-shadow: none !important;
+  background-color: transparent;
 }
 
 
@@ -140,7 +141,7 @@
     justify-content: center !important;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
       <div class="container">
         <a class="navbar-brand noscroll" href="index.html">Chillitray</a>
-        <button class="navbar-toggler noscroll" type="button" onclick="myFunction();" data-toggle="collapse" data-target="#ftco-nav" id="menu_btn" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="border: none !important;">
+        <button class="navbar-toggler noscroll" id="navbar-toggler" type="button" onclick="myFunction();" data-toggle="collapse" data-target="#ftco-nav" id="menu_btn" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="border: none !important; ">
           <span class="oi oi-menu"></span> Menu
         </button>
 
