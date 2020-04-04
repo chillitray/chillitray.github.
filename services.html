@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/services_base.css">
     <link rel="stylesheet" href="css/services_vendor.css">
     <link rel="stylesheet" href="css/services_main.css">
-
+    
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -28,7 +28,18 @@
     ================================================== -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
-
+    <script type="text/javascript">
+      window.onscroll = () => {
+        const nav1 = document.querySelector('#nav_bar');
+        if(this.scrollY <= 10) {
+          nav1.className = 'navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light';
+        }
+        else {
+         nav1.className = 'nav_scroll navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light'; 
+        }
+      };
+    </script>
+  </head>
 </head>
 
 
@@ -45,9 +56,175 @@
     </div>
 
 
-    <!-- header
+<!-- navbar -->
+<nav id="nav_bar" style="display: flex !important;
+    justify-content: center !important;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand noscroll" style="position:relative; left:-10%;" href="index.html">Chillitray</a>
+        <button class="navbar-toggler noscroll" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto" style="position: relative; left: 15%;">
+            <li class="nav-item"><a href="index.html" class="nav-link noscroll">Home</a></li>
+            <li class="nav-item option1">
+              <div class="dropdown">
+                <a href="service.html" onmouseover="document.getElementById('hidden').style.display='block';" style="text-transform: uppercase; font-size: 13px; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; color:#6927ff !important;" class="nav-link dropdown-toggle" data-hover="dropdown">Services</a>
+                <ul class="dropdown-menu" id="hidden" style="list-style: none; display: none; margin-top: 1rem;" >
+                  <li><a href="#"  class="dropdown-item" style="" >Web Development</a></li>
+                  <li><a href="#" class="dropdown-item" >Digital Marketing</a></li>
+                  <li><a href="#" class="dropdown-item" >API Development</a></li>
+                  <li><a href="#" class="dropdown-item" >Solutions</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item option2"><a href="services.html" id="1" class="nav-link noscroll">Services</a></li>
+              <li class="nav-item"><a href="whyus.html" class="nav-link noscroll">Why Us?</a></li>
+            <li class="nav-item"><a class="nav-link noscroll" href="whyus.html">Pricing</a></li>
+            <li class="nav-item"><a href="aboutus.html"class="nav-link noscroll">About Us</a></li>
+            <li class="nav-item"><a href="blog.html" class="noscroll nav-link">Blog</a></li>
+            <li class="nav-item cta"><a href="contact.html" class="nav-link" style="letter-spacing: 1px; padding: 1rem 1.5rem; font-weight: 500;"><span>Get Quote?</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style type="text/css">
+        body {
+            font-family: "Work Sans", Arial, sans-serif;
+        }
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight: 900 !important;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+ li {
+	padding: 0px !important;
+}
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #6927ff;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+.ftco-navbar-light {
+    background: transparent !important;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+.navbar-expand-lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.navbar {
+    position: fixed !important; 
+    top:0px !important; 
+    background: transparent !important; 
+    z-index: 3; 
+    padding-top: 4.5rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;  
+}
+      .dropdown:hover .dropdown-menu {
+		display: block;
+		margin-top: 0; 
+		}
+      .nav_scroll {
+        background: white !important; 
+        padding-top: 2.5rem !important;
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important; 
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .collapse > .navbar-nav > .nav-item > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .collapse > .navbar-nav > .nav-item > .dropdown > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important;
+      }
+      .noscroll {
+        color: white !important;
+      }
+      
+        @media screen and (max-width: 1200px) {
+        .one-third {
+        opacity: 0.2;
+        }
+        }
+        @media screen and (min-width: 995px) {
+        .option2 {
+          display: none;
+        }
+        .option1 {
+          display: block;
+        }
+        }
+        @media screen and (max-width: 995px) {
+        .option2 {
+          display: block;
+        }
+        .option1 {
+          display: none;
+        }
+        }
+        .nav-link {
+          font-weight: bolder !important;
+        }
+        .nav-link:hover {
+          color: #6927ff !important;
+        }
+        .dropdown-item:hover {
+          color: white;
+          background-color: #6927ff;  
+        }
+          </style>
+
+
+
+
+
+
+    <!--alter header
     ================================================== -->
-    <header class="s-header">
+<!--   <header class="s-header">
 
         <div class="row">
 
@@ -63,16 +240,15 @@
                     <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
                 </ul>
-            </nav> <!-- end header-nav-wrap -->
+            </nav> 
             
             <a class="header-menu-toggle" href="#0">
                 <span class="header-menu-icon"></span>
             </a>
 
-        </div> <!-- end row -->
-
-    </header> <!-- end s-header -->
-
+        </div> 
+    </header> 
+-->
 
     <!-- home
     ================================================== -->
@@ -91,7 +267,7 @@
                 </h1>
 
                 <div class="home-content__button">
-                    <a href="contact.html" class="smoothscroll btn btn-animatedbg">
+                    <a href="contact.html" style=" vertical-align: middle; line-height: 4rem; letter-spacing: 0.5rem; padding: 1rem 10rem;"  class="smoothscroll btn btn-animatedbg">
                         Contact Us
                     </a>
                 </div>
@@ -639,90 +815,126 @@
 <!--    </section> <!-- end s-stats -->
 
 
-    <!-- contact
-    ================================================== -->
-    <section id="contact" class="s-contact target-section">
-
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="05" class="subhead">Get In Touch</h3>
-                <h1 class="display-1 display-1--light">Have an idea or an epic project in mind? Talk to 
-                    us. Let’s work together and make something 
-                    great. Drop us a line at <a href="mailto:#0">hello@stellar.com</a></h1>
+    <!-- Footer Begins -->	    
+    <footer class="ftco-footer ftco-bg-dark ftco-section" >
+      <div class="container">
+      	<div class="row mb-5 pb-5 align-items-center d-flex">
+      		<div class="col-md-6 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
+      			<div class="heading-section heading-section-white ftco-animate">
+      				<span style="color: white; text-transform: uppercase;" class="subheading">Get an easy quote from Us</span>
+	            <h2 style="font-size: 30px; font-weight: 700; color: white;">Propel your Business!</h2>
+	          </div>
+      		</div>
+      	<!--	<div class="col-md-3 ftco-animate">
+      			<div class="price">
+      				<span class="subheading">Starting at Only</span>
+      				<h3>$4.50<span>/mo</span></h3>
+      			</div>
+      		</div> -->  
+      		<div class="ftco-animate fadeInUp ftco-animated col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <h2 style="color: white;" >Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black" type="button" id="button-addon2" style="height: 3.2rem; padding: 1.1rem 0.8rem; background: #6927ff !important;
+border: 1px solid #6927ff !important;
+color: #fff !important;">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 bg-primary p-4">
+              <h2 class="ftco-heading-2">ChilliTray</h2>
+              <p>Simplified, Sorted & Enabling Solutions for you Professional, Personal & Business needs.</p>
+              <ul class="ftco-footer-social list-unstyled mb-0 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Useful Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Digital Marketing</a></li>
+                <li><a href="#" class="py-2 d-block">Web Development</a></li>
+                <li><a href="#" class="py-2 d-block">API Development</a></li>
+                <li><a href="#" class="py-2 d-block">Other Solutions</a></li>
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Navigational</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="py-2 d-block">Home</a></li>
+                <li><a href="services.html" class="py-2 d-block">Services</a></li>
+                <li><a href="whyus.html" class="py-2 d-block">Why Us?</a></li>
+                <li><a href="aboutus.html" class="py-2 d-block">About</a></li>
+                <li><a href="https://ulogx.com" class="py-2 d-block">Blog</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <style type="text/css">
+          	li .text {
+    padding-right: 0.5rem;
+    vertical-align: top;
+}
+.block-23 >  ul > li, .block-23 ul li > a {
+    line-height: 3.5 !important;
+}
+.icon {
+	padding-right: 2rem;
+}
+.form-control {
+    height: 52px !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 18px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ebebeb;
+        border-top-color: rgb(235, 235, 235);
+        border-right-color: rgb(235, 235, 235);
+        border-bottom-color: rgb(235, 235, 235);
+        border-left-color: rgb(235, 235, 235);
+}
+          </style>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Office</h2>
+            	<div class="block-23 mb-3">
+	             <ul style="list-style-type: none;">
+	                <li><span style="color: white;" class="icon icon-map-marker"></span><span style="color: white;" class="text">RT Nagar, Bangalore</span></li>
+	                <li><a href="tel:+918105456210"><span class="icon icon-phone"></span><span class="text">+91 8105456210</span></a></li>
+			<li><a href="+919611478322"><span class="icon icon-phone"></span><span class="text">+91 9611478322</span></a></li>      
+	                <li><a href="mailto:contact@chillitray.com"><span class="icon icon-envelope"></span><span class="text">contact@chillitray.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
         </div>
-
-        <div class="row contact-infos">
-
-            <div class="col-five md-seven tab-full contact-address" data-aos="fade-up">
-                <h4>Where to Find Us</h4>
-
-                <p>
-                1600 Amphitheatre Parkway <br>
-                Mountain View, California <br>
-                94043  US
-                </p>
-            </div>
-
-            <div class="col-three md-five tab-full contact-social" data-aos="fade-up">
-                <h4>Follow Us</h4>
-
-                <ul class="contact-list">
-                    <li><a href="#0">Facebook</a></li>
-                    <li><a href="#0">Twitter</a></li>
-                    <li><a href="#0">Instagram</a></li>
-                </ul>
-            </div>
-
-            <div class="col-four md-six tab-full contact-number" data-aos="fade-up">
-                <h4>Contact Us</h4>
-
-                <ul class="contact-list">
-                    <li><a href="mailto:#0">info@stellar.com</a></li>
-                    <li><a href="tel:197-543-2345">+197 543 2345</a></li>
-                    <li><a href="tel:197-123-9876">+197 123 9876</a></li>
-                </ul>
-            </div>
-
-        </div> <!-- end contact-infos -->
-
-        <div class="row contact-bottom">
-            <div class="col-five tab-full contact-button" data-aos="fade-up">
-                <a href="#about" class="smoothscroll btn btn-animatedbg">
-                    Let's Talk 
-                </a>
-            </div>
-
-            <div class="col-six tab-full contact-subscribe" data-aos="fade-up">
-                <h4>Subscribe</h4>
-
-                <form id="mc-form" class="group mc-form" novalidate="true">
-                    <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                    <input type="submit" name="subscribe" value="Subscribe">
-                    <label for="mc-email" class="subscribe-message"></label>
-                </form>
-            </div>
-        </div> <!-- end contact-button -->
-
-    </section> <!-- end s-contact -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer>
         <div class="row">
-            <div class="col-full cl-copyright">
-                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</span>
-            </div>
-        </div>
+          <div class="col-md-12 text-center">
 
-        <div class="cl-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://chillitray.com" target="_blank">ChilliTray</a>
+  </p>
+          </div>
         </div>
+      </div>
     </footer>
+	    
+<!-- Footer ends -->
 
 
     <!-- photoswipe background
@@ -769,5 +981,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/services_main.js"></script>
-
+ 
 </body>
