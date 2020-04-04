@@ -25,9 +25,20 @@
 
     <!-- favicons
     ================================================== -->
+    <link rel="stylesheet" href="css/icomoon.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
+
     <script type="text/javascript">
+        function myFunction() {
+          var x = document.getElementById('ftco-nav');
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        } 
       window.onscroll = () => {
         const nav1 = document.querySelector('#nav_bar');
         if(this.scrollY <= 10) {
@@ -54,23 +65,64 @@
         </div>
     </div>
 
-
+<style type="text/css">
+    .navbar-brand {
+        position:relative; 
+        left:-10%;
+    }
+    @media screen and (max-width: 995px) {
+        .navbar-brand {
+            position:relative; 
+            left:2px;
+        }
+        #nav_bar > .container {
+            width: 100%;
+        }
+        #menu_btn {
+            display: absolute;
+            right: 2px;
+        }
+        #nav_bar {
+            padding-top: 1px !important;
+        }
+        #ul_l {
+            left: 0% !important;
+        }
+        #get_quote {
+    letter-spacing: 1px; 
+    padding: 1rem 1.5rem; 
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #6927ff;
+    margin-top: 4px;
+    background: #6927ff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    }
+    .ftco-navbar-light .navbar-nav > .nav-item.cta > a span {
+    display: inline-block;
+    color: #fff;
+    width: 90%;
+    }
+</style>
 <!-- navbar -->
 <nav id="nav_bar" style="display: flex !important;
-    justify-content: center !important;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    justify-content: center !important;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
       <div class="container">
-        <a class="navbar-brand noscroll" style="position:relative; left:-10%;" href="index.html">Chillitray</a>
-        <button class="navbar-toggler noscroll" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand noscroll" href="index.html">Chillitray</a>
+        <button class="navbar-toggler noscroll" type="button" onclick="myFunction();" data-toggle="collapse" data-target="#ftco-nav" id="menu_btn" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto" style="position: relative; left: 15%;">
+        <div class="collapse navbar-collapse" style="display: none;" id="ftco-nav">
+          <ul class="navbar-nav ml-auto" id="ul_l" style="position: relative; left: 15%;">
             <li class="nav-item"><a href="index.html" class="nav-link noscroll">Home</a></li>
             <li class="nav-item option1">
               <div class="dropdown">
-                <a href="service.html" onmouseover="document.getElementById('hidden').style.display='block';" style="text-transform: uppercase; font-size: 13px; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; color:#6927ff !important;" class="nav-link dropdown-toggle" data-hover="dropdown">Services</a>
-                <ul class="dropdown-menu" id="hidden" style="list-style: none; display: none; margin-top: 1rem;" >
+                <a href="service.html" onmouseover="document.getElementById('hidden').style.display='block';" style="text-transform: uppercase; font-size: 13px; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; color:#6927ff !important;" class="nav-link dropdown-toggle" data-hover="dropdown">Services <i style=" vertical-align: super; border: solid #6927ff; border-width: 0 3px 3px 0; display: inline-block; padding: 2px;transform: rotate(45deg); -webkit-transform: rotate(45deg);"></i></a>
+                <ul class="dropdown-menu" id="hidden" onmouseover="document.getElementById('hidden').style.display='block';" onmouseout="document.getElementById('hidden').style.display='none';" style="list-style: none; display: none; margin-top: 1rem;" >
                   <li><a href="#"  class="dropdown-item" style="" >Web Development</a></li>
                   <li><a href="#" class="dropdown-item" >Digital Marketing</a></li>
                   <li><a href="#" class="dropdown-item" >API Development</a></li>
@@ -78,21 +130,65 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item option2"><a href="services.html" id="1" class="nav-link noscroll">Services</a></li>
+            <li class="nav-item option2"><a href="services.html" style="color:#6927ff !important;" id="1" class="nav-link noscroll">Services</a></li>
               <li class="nav-item"><a href="whyus.html" class="nav-link noscroll">Why Us?</a></li>
             <li class="nav-item"><a class="nav-link noscroll" href="whyus.html">Pricing</a></li>
             <li class="nav-item"><a href="aboutus.html"class="nav-link noscroll">About Us</a></li>
             <li class="nav-item"><a href="blog.html" class="noscroll nav-link">Blog</a></li>
-            <li class="nav-item cta"><a href="contact.html" class="nav-link" style="letter-spacing: 1px; padding: 1rem 1.5rem; font-weight: 500;"><span>Get Quote?</span></a></li>
+            <li class="nav-item cta" ><a id="get_quote" href="contact.html" class="nav-link" style="letter-spacing: 1px; padding: 1rem 1.5rem; font-weight: 500;"><span>Get Quote?</span></a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <style type="text/css">
+        .container_footer {
+    max-width: 1140px;
+}
+.container_footer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+        .col-md {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
         body {
             font-family: "Work Sans", Arial, sans-serif;
         }
+
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+.row_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
 .navbar-brand {
     display: inline-block;
     padding-top: 0.3125rem;
@@ -266,7 +362,7 @@ a {
                 </h1>
 
                 <div class="home-content__button">
-                    <a href="contact.html" style=" vertical-align: middle; line-height: 4rem; letter-spacing: 0.5rem; padding: 1rem 10rem;"  class="smoothscroll btn btn-animatedbg">
+                    <a href="contact.html" style=" vertical-align: middle; font-weight: 500; font-size: large; line-height: 4rem; letter-spacing: 0.5rem; padding: 1rem 7rem;"  class="smoothscroll btn btn-animatedbg">
                         Contact Us
                     </a>
                 </div>
@@ -328,32 +424,32 @@ a {
         <div class="row about-process block-1-2 block-tab-full">
 
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--planning">
-                    <h3>Business Website</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-city"></i>Business Website</h3>
                 </div>
                 <p>
                     Be it E-commerce, Branding, Travels, Business portfolio, Sales or any requirement for your business to take online, We'd do it for you. Be it static or Dynamic or CMS website, you can always rely upon us.
                 </p>
             </div>
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--branding">
-                    <h3>Personal Branding</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-user-tie"></i>Personal Branding</h3>
                 </div>
                 <p>
                     Are you an Influencer? Business person? Actor? Politician? Model? Photographer? Important person? ! Establish yourself as a brand, make yourself reachable professionally. We'd build a personal or Portfolio website for you.! 
                 </p> 
             </div>
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--implementation">
-                    <h3>Educational Institutions & NGOs</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-school"></i>Educational Institutions & NGOs</h3>
                 </div>
                 <p>
                     We'd Create a portal for your NGO / Non-profit Organizations to empower your community to have better and larger outreach towards needs. As Educational Institutions, looking for School Branding? Learning Platform? We'd Build it with you, For you.
                 </p>
             </div>
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--documentation">
-                    <h3>eGiftX</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-gifts"></i>eGiftX</h3>
                 </div>
                 <p>
                     eGiftX is Exclusive service by us, to Gift Experiences to your loved Ones. Gift them a platform of memories, unique gifting ranges just by us. Be it Birthdays, Anniversaries or Important dates, we're keen to make it special for you. Contact us to learn more, you'd not regret it. Promise.!
@@ -364,7 +460,11 @@ a {
 
     </section> <!-- end s-about -->
 
-
+<style type="text/css">
+    .about-process h3 {
+        margin-left: 0rem !important;
+    }
+</style>
     <!-- services
     ================================================== -->
     <section id="services" class="s-services target-section">
@@ -814,38 +914,44 @@ a {
 
     <!-- Footer Begins -->	    
     <footer class="ftco-footer ftco-bg-dark ftco-section" >
-      <div class="container">
-      	<div class="row mb-5 pb-5 align-items-center d-flex">
-      		<div class="col-md-6 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
+      <div class="container_footer">
+      	<div class="row_footer mb-5 pb-5 align-items-center d-flex" style="display: flex !important;
+    justify-content: center !important;">
+      		<table><tr>
+        <td>    <div class="col-md-6 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
       			<div class="heading-section heading-section-white ftco-animate">
-      				<span style="color: white; text-transform: uppercase;" class="subheading">Get an easy quote from Us</span>
-	            <h2 style="font-size: 30px; font-weight: 700; color: white;">Propel your Business!</h2>
+      				<span style="color: white; text-transform: uppercase; padding: 0px !important;" class="subheading">Get an easy quote from Us</span>
+	            <font style="font-size: 30px; font-weight: 700; color: white; padding: 0px !important;">Propel your Business!</font>
 	          </div>
-      		</div>
+      		</div></td>
       	<!--	<div class="col-md-3 ftco-animate">
       			<div class="price">
       				<span class="subheading">Starting at Only</span>
       				<h3>$4.50<span>/mo</span></h3>
       			</div>
-      		</div> -->  
+      		</div> -->  <td>
       		<div class="ftco-animate fadeInUp ftco-animated col-md-6" data-aos="fade-up" data-aos-delay="100">
             <h2 style="color: white;" >Subscribe Newsletter</h2>
             <form action="#" method="post" class="footer-subscribe">
               <div class="input-group mb-3">
                 <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                  <button class="btn btn-primary text-black" type="button" id="button-addon2" style="height: 3.2rem; padding: 1.1rem 0.8rem; background: #6927ff !important;
+                  <button class="btn btn-primary text-black " type="button" id="button-addon2" style="height: 3.2rem; padding: 1.1rem 0.8rem; background: #6927ff !important; height: 5.3rem; border-top-left-radius: 0 !important;
+border-bottom-left-radius: 0 !important;
 border: 1px solid #6927ff !important;
-color: #fff !important;">Send</button>
+color: #fff !important; padding: 0.375rem 0.75rem; -webkit-border-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; font-size: medium;">Send</button>
                 </div>
               </div>
             </form>
-          </div>
+          </div></td>
+      </tr></table>
       	</div>
-        <div class="row mb-5">
+        <div class="row_footer mb-5">
           <div class="col-md">
-            <div class="ftco-footer-widget mb-4 bg-primary p-4">
-              <h2 class="ftco-heading-2">ChilliTray</h2>
+            <div class="ftco-footer-widget mb-4 bg-primary p-4" style="padding-left: 2rem; padding-right: 2rem; padding-top: 1px;">
+              <h2 class="ftco-heading-2" style="margin-top: 2rem !important;">ChilliTray</h2>
               <p>Simplified, Sorted & Enabling Solutions for you Professional, Personal & Business needs.</p>
               <ul class="ftco-footer-social list-unstyled mb-0 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -856,7 +962,7 @@ color: #fff !important;">Send</button>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Useful Links</h2>
+              <h2 class="ftco-heading-2" style="margin-top: 2rem !important;">Useful Links</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Digital Marketing</a></li>
                 <li><a href="#" class="py-2 d-block">Web Development</a></li>
@@ -869,7 +975,7 @@ color: #fff !important;">Send</button>
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Navigational</h2>
+              <h2 class="ftco-heading-2" style="margin-top: 2rem !important;">Navigational</h2>
               <ul class="list-unstyled">
                 <li><a href="index.html" class="py-2 d-block">Home</a></li>
                 <li><a href="services.html" class="py-2 d-block">Services</a></li>
@@ -881,6 +987,186 @@ color: #fff !important;">Send</button>
             </div>
           </div>
           <style type="text/css">
+
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.btn.btn-primary {
+    background: #6927ff;
+    border: 1px solid #6927ff;
+    color: #fff;
+}
+.input-group-prepend .btn, .input-group-append .btn {
+    position: relative;
+    z-index: 2;
+}
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+.btn {
+    cursor: pointer;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    -webkit-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button {
+    border-radius: 0;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+            .input-group-append {
+    margin-left: -1px;
+}
+.input-group-prepend, .input-group-append {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+            .input-group {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+.form-control {
+    height: 52px !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 18px;
+    border-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ebebeb;
+        border-top-color: rgb(235, 235, 235);
+        border-right-color: rgb(235, 235, 235);
+        border-bottom-color: rgb(235, 235, 235);
+        border-left-color: rgb(235, 235, 235);
+}
+.text-white {
+    color: #fff !important;
+}
+.border-secondary {
+    border-color: #6c757d !important;
+}
+.bg-transparent {
+    background-color: transparent !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+        margin-bottom: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
           	li .text {
     padding-right: 0.5rem;
     vertical-align: top;
@@ -908,7 +1194,7 @@ color: #fff !important;">Send</button>
           </style>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Office</h2>
+            	<h2 class="ftco-heading-2" style="margin-top: 2rem !important;">Office</h2>
             	<div class="block-23 mb-3">
 	             <ul style="list-style-type: none;">
 	                <li><span style="color: white;" class="icon icon-map-marker"></span><span style="color: white;" class="text">RT Nagar, Bangalore</span></li>
@@ -920,7 +1206,7 @@ color: #fff !important;">Send</button>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row_footer">
           <div class="col-md-12 text-center">
 
             <p>
