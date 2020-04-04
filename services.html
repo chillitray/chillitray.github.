@@ -288,10 +288,15 @@ a {
         }
         }
         @media screen and (min-width: 995px) {
+            .d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
        .row_footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -305,6 +310,12 @@ a {
         }
         }
         @media screen and (max-width: 995px) {
+            .col-md-6 { 
+                max-width: 100% !important;
+            }
+            .d-flex {
+                display: block !important;
+            }
         .option2 {
           display: block;
         }
@@ -923,15 +934,28 @@ a {
 
 <!--    </section> <!-- end s-stats -->
 
+<style type="text/css">
+    .col-md-6 {
+        -webkit-box-flex: 0;
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+margin-bottom: 3rem !important;
+    }
+    .align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
 
+</style>
     <!-- Footer Begins -->	    
     <footer class="ftco-footer ftco-bg-dark ftco-section" >
       <div class="container_footer">
-      	<div class="row_footer mb-5 pb-5 align-items-center d-flex" style="display: flex !important;
-    justify-content: center !important;">
+      	<div class="row_footer mb-5 pb-5 align-items-center d-flex">
       		
             
-            <div class="col-md-6 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6 ftco-animate fadeInUp ftco-animated" style="" data-aos="fade-up" data-aos-delay="100">
       			<div class="heading-section heading-section-white ftco-animate">
       				<span style="color: white; text-transform: uppercase; padding: 0px !important;" class="subheading">Get an easy quote from Us</span>
 	            <font style="font-size: 30px; font-weight: 700; color: white; padding: 0px !important;">Propel your Business!</font>
