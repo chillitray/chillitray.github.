@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
@@ -18,7 +17,8 @@
     <link rel="stylesheet" href="css/services_base.css">
     <link rel="stylesheet" href="css/services_vendor.css">
     <link rel="stylesheet" href="css/services_main.css">
-
+     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+   
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -26,9 +26,31 @@
 
     <!-- favicons
     ================================================== -->
+    <link rel="stylesheet" href="css/icomoon.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
 
+    <script type="text/javascript">
+        function myFunction() {
+          var x = document.getElementById('ftco-nav');
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        } 
+      window.onscroll = () => {
+        const nav1 = document.querySelector('#nav_bar');
+        if(this.scrollY <= 10) {
+          nav1.className = 'navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light';
+        }
+        else {
+         nav1.className = 'nav_scroll navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light'; 
+        }
+      };
+    </script>
+  </head>
 </head>
 
 
@@ -36,18 +58,309 @@
     
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+<!--    <div id="preloader">
         <div id="loader" class="dots-jump">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div>       --><!-- removed inbuilt preloader -->
+
+<style type="text/css">
+    .navbar-brand {
+        position:relative; 
+        left:-10%;
+    }
+    @media screen and (max-width: 995px) {
+        .ftco-footer {
+    font-size: 16px;
+    padding: 5em 0;
+        padding-bottom: 5em;
+    padding-bottom: 3em;
+    background: #421b9b;
+    position: relative;
+    height: max-content;
+    display: inline-table;
+}
+#navbar-toggler:active,#navbar-toggler:focus,#navbar-toggler:focus:active {
+  background-image: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  background-color: transparent !important;
+}
 
 
-    <!-- header
+        .navbar-brand {
+            position:relative; 
+            left:2px;
+        }
+        #nav_bar > .container {
+            width: 100%;
+        }
+        #menu_btn {
+            display: absolute;
+            right: 2px;
+        }
+        #nav_bar {
+            padding-top: 1.5px !important;
+            padding-bottom: 1.5px !important;
+        }
+        #ul_l {
+            left: 0% !important;
+            margin-left: 0px !important;
+        }
+        #ul_l > li > a{
+            font-weight: 500 !important;
+            letter-spacing: 1px !important;
+            font-family: "Work Sans", Arial, sans-serif !important;
+            font-size: 13px !important;
+        }  
+        #get_quote {
+    letter-spacing: 1px; 
+    padding: 1rem 1.5rem; 
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #6927ff;
+    margin-top: 4px;
+    background: #6927ff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    }
+    .ftco-navbar-light .navbar-nav > .nav-item.cta > a span {
+    display: inline-block;
+    color: #fff;
+    width: 92%;
+    }
+</style>
+<!-- navbar -->
+<nav id="nav_bar" style="display: flex !important;
+    justify-content: center !important;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> <img style="height: 3rem; padding: 0px !important; margin: 0px !important;" src="images/logos/LogoTransparent.png">  </a>
+        <button class="navbar-toggler noscroll" id="navbar-toggler" type="button" onclick="myFunction();" data-toggle="collapse" data-target="#ftco-nav" id="menu_btn" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="border: none !important; ">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" style="display: none;" id="ftco-nav">
+          <ul class="navbar-nav ml-auto" id="ul_l" style="position: relative; left: 15%;">
+            <li class="nav-item"><a href="index.html" class="nav-link noscroll">Home</a></li>
+            <li class="nav-item option1">
+              <div class="dropdown">
+                <a href="service.html" onmouseover="document.getElementById('hidden').style.display='block';" style="text-transform: uppercase; font-size: 13px; margin-bottom:-1px; padding-top: 0.9rem; padding-left: 20px; letter-spacing: 1px; font-weight: 500; padding-right: 20px; padding-bottom: 0.9rem; color:#6927ff !important;" class="nav-link dropdown-toggle" data-hover="dropdown">Services <i style=" vertical-align: super; border: solid #6927ff; border-width: 0 3px 3px 0; display: inline-block; padding: 2px;transform: rotate(45deg); -webkit-transform: rotate(45deg);"></i></a>
+                <ul class="dropdown-menu" id="hidden" onmouseover="document.getElementById('hidden').style.display='block';" onmouseout="document.getElementById('hidden').style.display='none';" style="list-style: none; display: none; margin-top: 1rem;" >
+                  <li><a href="webdev.html"  class="dropdown-item" style="" >Web Development</a></li>
+                  <li><a href="digitalmarketing.html" class="dropdown-item" >Digital Marketing</a></li>
+                  <li><a href="apidev.html" class="dropdown-item" >API Development</a></li>
+                  <li><a href="#" class="dropdown-item" >Solutions</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item option2"><a href="services.html" style="color:#6927ff !important;" id="1" class="nav-link noscroll">Services</a></li>
+              <li class="nav-item"><a href="whyus.html" class="nav-link noscroll">Why Us?</a></li>
+            <li class="nav-item"><a class="nav-link noscroll" href="whyus.html">Pricing</a></li>
+            <li class="nav-item"><a href="aboutus.html"class="nav-link noscroll">About Us</a></li>
+            <li class="nav-item"><a href="blog.html" class="noscroll nav-link">Blog</a></li>
+            <li class="nav-item cta" ><a id="get_quote" href="contact.html" class="nav-link" style="letter-spacing: 1px; padding: 1rem 1.5rem; font-weight: 500;"><span>Get Quote?</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style type="text/css">
+        .container_footer {
+    max-width: 1140px;
+}
+.container_footer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+        .col-md {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+        body {
+            font-family: "Work Sans", Arial, sans-serif;
+        }
+
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight: 900 !important;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+ li {
+	padding: 0px !important;
+}
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #6927ff;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+.ftco-navbar-light {
+    background: transparent !important;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+.navbar-expand-lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.navbar {
+    position: fixed !important; 
+    top:0px !important; 
+    background: transparent !important; 
+    z-index: 3; 
+    padding-top: 4.5rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;  
+}
+      .dropdown:hover .dropdown-menu {
+		display: block;
+		margin-top: 0; 
+		}
+      .nav_scroll {
+        background: white !important; 
+        padding-top: 2.5rem !important;
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important; 
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .collapse > .navbar-nav > .nav-item > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .collapse > .navbar-nav > .nav-item > .dropdown > .noscroll {
+        color: black !important;
+      }
+      .nav_scroll > .container > .noscroll {
+        color: black !important;
+      }
+      .noscroll {
+        color: white !important;
+      }
+      
+        @media screen and (max-width: 1200px) {
+        .one-third {
+        opacity: 0.2;
+        }
+        }
+        @media screen and (min-width: 995px) {
+            
+            .d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+       .row_footer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+        .option2 {
+          display: none;
+        }
+        .option1 {
+          display: block;
+        }
+        }
+        @media screen and (max-width: 995px) {
+            .col-md-6 { 
+                max-width: 100% !important;
+            }
+            .d-flex {
+                display: block !important;
+            }
+        .option2 {
+          display: block;
+        }
+        .option1 {
+          display: none;
+        }
+        }
+        .nav-link {
+          font-weight: bolder !important;
+        }
+        .nav-link:hover {
+          color: #6927ff !important;
+        }
+        .dropdown-item:hover {
+          color: white;
+          background-color: #6927ff;  
+        }
+          </style>
+
+
+
+
+
+
+    <!--alter header
     ================================================== -->
-    <header class="s-header">
+<!--   <header class="s-header">
 
         <div class="row">
 
@@ -63,16 +376,15 @@
                     <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
                 </ul>
-            </nav> <!-- end header-nav-wrap -->
+            </nav> 
             
             <a class="header-menu-toggle" href="#0">
                 <span class="header-menu-icon"></span>
             </a>
 
-        </div> <!-- end row -->
-
-    </header> <!-- end s-header -->
-
+        </div> 
+    </header> 
+-->
 
     <!-- home
     ================================================== -->
@@ -91,8 +403,8 @@
                 </h1>
 
                 <div class="home-content__button">
-                    <a href="contact.html" class="smoothscroll btn btn-animatedbg">
-                        Contact Us
+                    <a href="contact.html" style=" vertical-align: middle; font-weight: 500; font-size: large; line-height: 4rem; letter-spacing: 0.5rem; padding: 1rem 7rem;"  class="smoothscroll btn btn-animatedbg">
+                        Solve with us
                     </a>
                 </div>
 
@@ -153,32 +465,32 @@
         <div class="row about-process block-1-2 block-tab-full">
 
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--planning">
-                    <h3>Business Website</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-city"></i>Business Website</h3>
                 </div>
                 <p>
                     Be it E-commerce, Branding, Travels, Business portfolio, Sales or any requirement for your business to take online, We'd do it for you. Be it static or Dynamic or CMS website, you can always rely upon us.
                 </p>
             </div>
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--branding">
-                    <h3>Personal Branding</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-user-tie"></i>Personal Branding</h3>
                 </div>
                 <p>
                     Are you an Influencer? Business person? Actor? Politician? Model? Photographer? Important person? ! Establish yourself as a brand, make yourself reachable professionally. We'd build a personal or Portfolio website for you.! 
                 </p> 
             </div>
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--implementation">
-                    <h3>Educational Institutions & NGOs</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-school"></i>Educational Institutions & NGOs</h3>
                 </div>
                 <p>
                     We'd Create a portal for your NGO / Non-profit Organizations to empower your community to have better and larger outreach towards needs. As Educational Institutions, looking for School Branding? Learning Platform? We'd Build it with you, For you.
                 </p>
             </div>
             <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--documentation">
-                    <h3>eGiftX</h3>
+                <div class="item-process__header">
+                    <h3><i style="font-size: 50px; color: #6927ff; margin-right: 2rem;" class="fas fa-gifts"></i>eGiftX</h3>
                 </div>
                 <p>
                     eGiftX is Exclusive service by us, to Gift Experiences to your loved Ones. Gift them a platform of memories, unique gifting ranges just by us. Be it Birthdays, Anniversaries or Important dates, we're keen to make it special for you. Contact us to learn more, you'd not regret it. Promise.!
@@ -189,7 +501,11 @@
 
     </section> <!-- end s-about -->
 
-
+<style type="text/css">
+    .about-process h3 {
+        margin-left: 0rem !important;
+    }
+</style>
     <!-- services
     ================================================== -->
     <section id="services" class="s-services target-section">
@@ -211,18 +527,14 @@
             <div class="col-block item-service" data-aos="fade-up">
                 <h4>Analytics Support</h4>
                 <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                We would enable complete analytics support for your portal to track & strategise based on number of users landing on the platform with demographic, timely and frequency insights. Which helps to better understand website traffic and boost it's growth.
                 </p>
             </div>
 
             <div class="col-block item-service" data-aos="fade-up">
                 <h4>AI Based Chatbot Integration</h4>
                 <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                Providing third party chatbots on your website for better engagement of customers landing on your page and enhance conversion ratio. Feautres such as auto reply, Magic screen and reply from Android/Ios Supported.
                 </p>
             </div>
 
@@ -243,9 +555,7 @@
             <div class="col-block item-service" data-aos="fade-up">
                 <h4>Free MailBox Integration</h4>
                 <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                Based on business requirements, we would help you create easy-to-use and secure email domains for your platform, for ultimate professional needs of your platform.
                 </p>
             </div>
 
@@ -522,30 +832,28 @@
                         Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium praesentium corpori.</p>
                         <div class="testimonials__author">
                             <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                            <span class="testimonials__name">Tim Cook</span>
-                            <span class="testimonials__position">CEO, Apple</span>
+                            <span class="testimonials__name">Afsal Armin</span>
+                            <span class="testimonials__position">Yathir International</span>
                         </div>
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
                         <span class="testimonials__icon"></span>
-                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                        Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
+                        <p>These are one of most experienced professionals we have worked with. They helped us build a digital presence and scale up digitally. I highly recommend their services.</p>
                         <div class="testimonials__author">
-                            <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-                            <span class="testimonials__name">Sundar Pichai</span>
-                            <span class="testimonials__position">CEO, Google</span>
+                            <img src="images/testimonial/annaiah.jpeg" alt="Author image" class="testimonials__avatar">
+                            <span class="testimonials__name">Annaiah B</span>
+                            <span class="testimonials__position">Nagar Nirmalya Foundation</span>
                         </div>
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
                         <span class="testimonials__icon"></span>
-                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
+                        <p>Chillitray technologies was a right answer to our business technology needs. They were extremely cordial understanding towards our requirements. Thanks to chillitray.</p>
                         <div class="testimonials__author">
-                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                            <span class="testimonials__name">Satya Nadella</span>
-                            <span class="testimonials__position">CEO, Microsoft</span>
+                            <img src="images/testimonial/naveen.jpeg" alt="Author image" class="testimonials__avatar">
+                            <span class="testimonials__name">Naveen kumar</span>
+                            <span class="testimonials__position">Shuchi International</span>
                         </div>
                     </div> <!-- end testimonials__slide -->
                     
@@ -619,7 +927,7 @@
 
     <!-- stats
     ================================================== -->
-    <section id="stats" class="s-stats">
+<!--    <section id="stats" class="s-stats">
 
         <div class="row stats-block block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
                 
@@ -642,93 +950,337 @@
 
         </div> <!-- end stats -->
 
-    </section> <!-- end s-stats -->
+<!--    </section> <!-- end s-stats -->
+
+<style type="text/css">
+    .col-md-6 {
+        -webkit-box-flex: 0;
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+margin-bottom: 3rem !important;
+    }
+    .align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+</style>
+    <!-- Footer Begins -->	    
+    <footer class="ftco-footer ftco-bg-dark ftco-section" >
+      <div class="container_footer">
+      	<div class="row_footer mb-5 pb-5 align-items-center d-flex">
+      		
+            
+            <div class="col-md-6 ftco-animate fadeInUp ftco-animated" style="" data-aos="fade-up" data-aos-delay="100">
+      			<div class="heading-section heading-section-white ftco-animate">
+      				<span style="color: white; text-transform: uppercase; padding: 0px !important;" class="subheading">Get an easy quote from Us</span>
+	            <font style="font-size: 30px; font-weight: 700; color: white; padding: 0px !important;">Propel your Business!</font>
+	          </div>
+      		</div>
+      	<!--	<div class="col-md-3 ftco-animate">
+      			<div class="price">
+      				<span class="subheading">Starting at Only</span>
+      				<h3>$4.50<span>/mo</span></h3>
+      			</div>
+      		</div> -->  
+      		<div class="ftco-animate fadeInUp ftco-animated col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <h2 style="color: white;" >Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black " type="button" id="button-addon2" style="height: 3.2rem; padding: 1.1rem 0.8rem; background: #6927ff !important; height: 5.3rem; border-top-left-radius: 0 !important;
+border-bottom-left-radius: 0 !important;
+border: 1px solid #6927ff !important;
+color: #fff !important; padding: 0.375rem 0.75rem; -webkit-border-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; font-size: medium;">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
 
 
-    <!-- contact
-    ================================================== -->
-    <section id="contact" class="s-contact target-section">
 
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="05" class="subhead">Get In Touch</h3>
-                <h1 class="display-1 display-1--light">Have an idea or an epic project in mind? Talk to 
-                    us. Let’s work together and make something 
-                    great. Drop us a line at <a href="mailto:#0">hello@stellar.com</a></h1>
+
+
+
+
+
+
+      	</div>
+        <div class="row_footer mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 bg-primary p-4" style="padding-left: 2rem; padding-right: 2rem; padding-top: 1px;">
+              <h2 class="ftco-heading-2"><img style="height: 5rem; padding: 0px !important; margin: 0px !important;" src="images/logos/footerLogoTransparent.png"> </h2>
+              <p>Simplified, Sorted & Enabling Solutions for you Professional, Personal & Business needs.</p>
+              <ul class="ftco-footer-social list-unstyled mb-0 ftco-animate fadeInUp ftco-animated" data-aos="fade-up" data-aos-delay="100">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2" style="margin-top: 2rem !important;">Useful Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Digital Marketing</a></li>
+                <li><a href="#" class="py-2 d-block">Web Development</a></li>
+                <li><a href="#" class="py-2 d-block">API Development</a></li>
+                <li><a href="#" class="py-2 d-block">Other Solutions</a></li>
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" style="margin-top: 2rem !important;">Navigational</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="py-2 d-block">Home</a></li>
+                <li><a href="services.html" class="py-2 d-block">Services</a></li>
+                <li><a href="whyus.html" class="py-2 d-block">Why Us?</a></li>
+                <li><a href="aboutus.html" class="py-2 d-block">About</a></li>
+                <li><a href="https://ulogx.com" class="py-2 d-block">Blog</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <style type="text/css">
+
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.btn.btn-primary {
+    background: #6927ff;
+    border: 1px solid #6927ff;
+    color: #fff;
+}
+.input-group-prepend .btn, .input-group-append .btn {
+    position: relative;
+    z-index: 2;
+}
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+.btn {
+    cursor: pointer;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    -webkit-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button {
+    border-radius: 0;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+            .input-group-append {
+    margin-left: -1px;
+}
+.input-group-prepend, .input-group-append {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+            .input-group {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+.form-control {
+    height: 52px !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 18px;
+    border-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ebebeb;
+        border-top-color: rgb(235, 235, 235);
+        border-right-color: rgb(235, 235, 235);
+        border-bottom-color: rgb(235, 235, 235);
+        border-left-color: rgb(235, 235, 235);
+}
+.text-white {
+    color: #fff !important;
+}
+.border-secondary {
+    border-color: #6c757d !important;
+}
+.bg-transparent {
+    background-color: transparent !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+        margin-bottom: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+          	li .text {
+    padding-right: 0.5rem;
+    vertical-align: top;
+}
+.block-23 >  ul > li, .block-23 ul li > a {
+    line-height: 3.5 !important;
+}
+.icon {
+	padding-right: 2rem;
+}
+.form-control {
+    height: 52px !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 18px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ebebeb;
+        border-top-color: rgb(235, 235, 235);
+        border-right-color: rgb(235, 235, 235);
+        border-bottom-color: rgb(235, 235, 235);
+        border-left-color: rgb(235, 235, 235);
+}
+          </style>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2" style="margin-top: 2rem !important;">Office</h2>
+            	<div class="block-23 mb-3">
+	             <ul style="list-style-type: none;">
+	                <li><span style="color: white;" class="icon icon-map-marker"></span><span style="color: white;" class="text">RT Nagar, Bangalore</span></li>
+	                <li><a href="tel:+918105456210"><span class="icon icon-phone"></span><span class="text">+91 8105456210</span></a></li>
+			<li><a href="+919611478322"><span class="icon icon-phone"></span><span class="text">+91 9611478322</span></a></li>      
+	                <li><a href="mailto:contact@chillitray.com"><span class="icon icon-envelope"></span><span class="text">contact@chillitray.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
         </div>
+        <div class="row_footer">
+          <div class="col-md-12 text-center">
 
-        <div class="row contact-infos">
-
-            <div class="col-five md-seven tab-full contact-address" data-aos="fade-up">
-                <h4>Where to Find Us</h4>
-
-                <p>
-                1600 Amphitheatre Parkway <br>
-                Mountain View, California <br>
-                94043  US
-                </p>
-            </div>
-
-            <div class="col-three md-five tab-full contact-social" data-aos="fade-up">
-                <h4>Follow Us</h4>
-
-                <ul class="contact-list">
-                    <li><a href="#0">Facebook</a></li>
-                    <li><a href="#0">Twitter</a></li>
-                    <li><a href="#0">Instagram</a></li>
-                </ul>
-            </div>
-
-            <div class="col-four md-six tab-full contact-number" data-aos="fade-up">
-                <h4>Contact Us</h4>
-
-                <ul class="contact-list">
-                    <li><a href="mailto:#0">info@stellar.com</a></li>
-                    <li><a href="tel:197-543-2345">+197 543 2345</a></li>
-                    <li><a href="tel:197-123-9876">+197 123 9876</a></li>
-                </ul>
-            </div>
-
-        </div> <!-- end contact-infos -->
-
-        <div class="row contact-bottom">
-            <div class="col-five tab-full contact-button" data-aos="fade-up">
-                <a href="#about" class="smoothscroll btn btn-animatedbg">
-                    Let's Talk 
-                </a>
-            </div>
-
-            <div class="col-six tab-full contact-subscribe" data-aos="fade-up">
-                <h4>Subscribe</h4>
-
-                <form id="mc-form" class="group mc-form" novalidate="true">
-                    <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                    <input type="submit" name="subscribe" value="Subscribe">
-                    <label for="mc-email" class="subscribe-message"></label>
-                </form>
-            </div>
-        </div> <!-- end contact-button -->
-
-    </section> <!-- end s-contact -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer>
-        <div class="row">
-            <div class="col-full cl-copyright">
-                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</span>
-            </div>
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://chillitray.com" target="_blank">ChilliTray</a>
+  </p>
+          </div>
         </div>
-
-        <div class="cl-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"></a>
-        </div>
+      </div>
     </footer>
+	    
+<!-- Footer ends -->
 
 
     <!-- photoswipe background
@@ -775,5 +1327,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/services_main.js"></script>
-
+ 
 </body>
+</html>
