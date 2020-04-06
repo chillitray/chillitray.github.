@@ -9190,7 +9190,7 @@ textarea.form-control {
       .testimony-section .owl-nav .owl-prev span:before,
       .testimony-section .owl-nav .owl-next span:before {
         font-size: 30px;
-        color: rgba(255, 255, 255, 0.5);
+        color: #6927ff;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
