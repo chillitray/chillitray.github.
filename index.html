@@ -915,6 +915,7 @@ container.fadeOut();
   <!-- loader -->
 <!--  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>    -->
 <!-- loader end -->
+
 <!-- Our Preloader -->
 <script src="[https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js](https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js)"></script>
 <!-- Preloader -->
@@ -932,29 +933,37 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: #fff;
+background-color: white;
+padding: 5%;
 /* change if the mask should have another color then white */
 z-index: 99;
 /* makes sure it stays on top */
 }
 #status {
-width: 100%;
-height:100%;
-position: absolute;
+  position: fixed;
+  z-index: 999;
+  height: 20em;
+  width: 20em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 /* centers the loading animation vertically one the screen */
 background-image: url('images/logos/LogoBreatheS.gif');
 /* path to your loading animation */
 background-repeat: no-repeat;
 background-position: center;
-margin: auto;
+background-size: contain;
 /* is width and height divided by two */
 }
 </style>
 <script id="ravi">
 $(window).on('load', function() { // makes sure the whole site is loaded
 $('#status').fadeOut(); // will first fade out the loading animation
-$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-$('body').delay(350).css({'overflow':'visible'});
+$('#preloader').delay(450).fadeOut('slow'); // will fade out the white DIV that covers the website.
+$('body').delay(450).css({'overflow':'visible'});
 })
 </script>
 <!-- preloader Ends -->
