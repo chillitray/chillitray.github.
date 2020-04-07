@@ -811,6 +811,9 @@ a {
     -ms-flex-align: center !important;
     align-items: center !important;
 }
+.subhead::before {
+    content: attr(data-num) " " !important;
+}
 .roww {
     display: -webkit-box;
     display: -ms-flexbox;
