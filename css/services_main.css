@@ -1962,8 +1962,8 @@ input::-moz-focus-inner {
   margin-bottom: 3.6rem;
   position: relative;
 }
-
 .subhead::before {
+  content: attr(data-num) ".";
   padding-right: 72px;
   font-weight: 700;
 }
