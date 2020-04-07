@@ -1964,7 +1964,6 @@ input::-moz-focus-inner {
 }
 
 .subhead::before {
-  content: attr(data-num) ".";
   padding-right: 72px;
   font-weight: 700;
 }
