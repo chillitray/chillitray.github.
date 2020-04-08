@@ -3248,8 +3248,8 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1200px) {
   .s-services {
-    padding-top: 16.2rem;
-    padding-bottom: 16.2rem;
+    padding-top: 10.2rem;
+    padding-bottom: 10.2rem;
   }
 
 }
