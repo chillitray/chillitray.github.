@@ -3183,7 +3183,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-services {
   padding-top: 18rem;
-  padding-bottom: 18rem;
+  padding-bottom: 1rem;
   background-color: #151515;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3275,7 +3275,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-  padding-top: 18rem;
+  padding-top: 1rem;
   padding-bottom: 18rem;
   background-color: #FFFFFF;
   position: relative;
