@@ -48,7 +48,13 @@
   gtag('config', 'UA-162129849-1');
 </script>
 <!-- Google analytics end -->
-
+<!--form on submit-->
+<script type="text/javascript">
+    function SubForm(){
+      setTimeout("location.href = 'http://www.chillitray.com/thankyou.html';", 5500);
+    }
+</script>
+<!-- end of from on submit-->
   </head>
   <body>
     
@@ -315,7 +321,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 mb-5">
-            <form action="https://formspree.io/mnqbgryq" class="p-5 bg-white" method="POST">
+            <form action="https://formspree.io/mnqbgryq" onsubmit="SubForm()" target="dummyframe"  class="p-5 bg-white" method="POST">
               <h2 class="h4 text-black mb-5">Contact Form</h2> 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
@@ -360,6 +366,7 @@
             </form>
           </div>
         </div>
+        <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
         <div class="row mb-5">
           <div class="col-md-4 text-center">
             <p class="mb-4">
